@@ -1,139 +1,213 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DD Furniture London | Maintenance</title>
 
-    <title>DD Furniture London | Website Maintenance</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f4f0;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
 
-        body {
-            min-height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f6f3;
-            color: #1f1f1f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-        }
+.wrapper {
+    width: 100%;
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    align-items: stretch;
+}
 
-        .maintenance-container {
-            width: 100%;
-            max-width: 720px;
-            text-align: center;
-            background: #ffffff;
-            padding: 65px 40px;
-            border-radius: 18px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
-        }
+.maintenance {
+    background: #fff;
+    padding: 55px 35px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 45px;
-        }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
 
-        .logo span {
-            font-weight: 400;
-        }
+.logo span {
+    font-weight: normal;
+}
 
-        .icon {
-            width: 75px;
-            height: 75px;
-            margin: 0 auto 30px;
-            border: 3px solid #222;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-        }
+.icon {
+    width: 72px;
+    height: 72px;
+    border: 2px solid #252525;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 0 auto 25px;
+}
 
-        h1 {
-            font-size: 42px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
+h1 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
 
-        .message {
-            max-width: 560px;
-            margin: 0 auto;
-            color: #666;
-            font-size: 17px;
-            line-height: 1.7;
-        }
+.message {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
 
-        .notice {
-            margin: 35px auto 0;
-            padding: 16px 22px;
-            background: #f5f3ef;
-            border-radius: 10px;
-            color: #444;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+.notice {
+    background: #f5f3ef;
+    padding: 18px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+}
 
-        .footer {
-            margin-top: 45px;
-            padding-top: 25px;
-            border-top: 1px solid #e8e8e8;
-            color: #888;
-            font-size: 13px;
-        }
+.footer {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 12px;
+}
 
-        @media (max-width: 600px) {
-            .maintenance-container {
-                padding: 45px 25px;
-            }
+/* Owner / Admin Notice */
+.admin-notice {
+    background: #222;
+    color: #fff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
 
-            .logo {
-                font-size: 24px;
-            }
+.admin-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #777;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
 
-            h1 {
-                font-size: 32px;
-            }
+.admin-notice .label {
+    color: #c8a96a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
 
-            .message {
-                font-size: 15px;
-            }
-        }
-    </style>
+.admin-notice h2 {
+    font-size: 23px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.admin-notice p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.admin-notice .divider {
+    height: 1px;
+    background: #444;
+    margin: 25px 0;
+}
+
+.admin-notice .small-text {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .maintenance {
+        padding: 40px 24px;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    .admin-notice {
+        padding: 28px;
+    }
+
+    .admin-notice h2 {
+        font-size: 21px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <main class="maintenance-container">
+<div class="wrapper">
+
+    <main class="maintenance">
 
         <div class="logo">
             DD <span>Furniture London</span>
         </div>
 
-        <div class="icon">
-            ⚙
-        </div>
+        <div class="icon">⚙</div>
 
         <h1>We'll Be Back Soon</h1>
 
         <p class="message">
-            Our website is temporarily unavailable while we carry out
-            some important maintenance and technical improvements.
+            Our website is temporarily unavailable due to a technical
+            issue. Our team is working to restore normal service
+            as soon as possible.
             We apologize for the inconvenience and appreciate your patience.
         </p>
 
         <div class="notice">
-            <strong>DD Furniture London</strong><br>
-            We're working to get everything back online as soon as possible.
-            Please check back shortly.
+            <strong>Thank you for your patience.</strong><br>
+            Please check back shortly while we work to get our website
+            back online.
         </div>
 
         <div class="footer">
@@ -142,5 +216,31 @@
 
     </main>
 
+    <aside class="admin-notice">
+
+        <div class="admin-icon">⚠</div>
+
+        <div class="label">Important Notice</div>
+
+        <h2>Are You the Website Owner or Administrator?</h2>
+
+        <p>
+            If you are the owner or administrator of DD Furniture London,
+            please contact your website development team to resolve
+            this technical issue and restore your website.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="small-text">
+            This notice is intended for authorized website owners
+            and administrators. Visitors can return to this page later.
+        </p>
+
+    </aside>
+
+</div>
+
 </body>
 </html>
+```
